@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const password = document.getElementById('password').value;
 
         try {
-            const response = await fetch('/api/auth/login', {
+            const response = await fetch('http://localhost:3000/api/auth/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const data = await response.json();
 
             if (response.ok) {
-                window.location.href = '/main/index.html'; // Перенаправляем на главную страницу
+                window.location.href = '/public/main/index.html'; // Перенаправляем на главную страницу
             } else {
                 console.error('Ошибка входа:', response.statusText);
             }

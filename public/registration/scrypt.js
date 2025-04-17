@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const data = await response.json();
 
             if (response.ok) {
-                window.location.href = '/login/index.html'; // Перенаправляем на страницу входа
+                window.location.href = '../login/index.html'; // Перенаправляем на страницу входа
             } else {
                 console.error('Ошибка регистрации:', response.statusText);
             }

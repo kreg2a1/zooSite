@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "start": "node ./backend/src/main.js",
-    "dev": "nodemon ./backend/src/main.js"
-  },
+  "start": "node ./backend/src/main.js",
+  "dev": "nodemon ./backend/src/main.js"
+},
   "dependencies": {
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
-    "express": "5.1.0",
+    "express": "^5.1.0",
     "pg": "^8.7.1"
   },
   "devDependencies": {
