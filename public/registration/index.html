@@ -1,21 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Регистрация</title>
-    <link rel="stylesheet" type="text/css" href="./styleReg.css">
-   
+    <link rel="stylesheet" href="/public/registration/styleReg.css" />
+    <script src="/public/registration/scrypt.js"></script>
 </head>
 <body>
-    <form id="register-form">
-        <label for="email">Email:</label>
-        <input type="email" id="email" required><br><br>
+    <form id="register-form" method="POST" action="/register">
+        <h2>Регистрация</h2>
+
         <label for="login">Логин:</label>
-        <input type="text" id="login" required><br><br>
+        <input type="text" id="login" name="login" required autocomplete="username" />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required autocomplete="email" />
+
         <label for="password">Пароль:</label>
-        <input type="password" id="password" required><br><br>
+        <input type="password" id="password" name="password" required autocomplete="new-password" />
+
+    
+
+        <div class="error-message" id="error-message"></div>
+
         <button type="submit">Зарегистрироваться</button>
-        <script type="module" src="./scrypt.js"></script>
+    </form>
+
+    <script src="register-script.js" defer></script>
 </body>
 </html>
